@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Adivinhação</h1>
+        <p>Tente adivinhar o número entre 1 e 100.</p>
+        <label for="dificuldade">Nível de Dificuldade:</label>
+        <select id="dificuldade" onchange="iniciarJogo()">
+            <option value="facil">Fácil</option>
+            <option value="medio">Médio</option>
+            <option value="dificil">Difícil</option>
+        </select>
+        <label for="tema">Tema:</label>
+        <select id="tema" onchange="mudarTema()">
+            <option value="claro">Claro</option>
+            <option value="escuro">Escuro</option>
+        </select>
+        <input type="number" id="palpite" min="1" max="100">
+        <button onclick="adivinhar()">Enviar Palpite</button>
+        <p id="mensagem"></p>
+        <p id="tentativas"></p>
+        <p id="historico"></p>
+        <button onclick="iniciarJogo()">Reiniciar Jogo</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
